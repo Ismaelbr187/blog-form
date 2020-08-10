@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   end
 
   def dashboard
+    @post = Post.new
   end
 
   def create
