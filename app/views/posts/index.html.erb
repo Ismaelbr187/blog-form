@@ -1,5 +1,13 @@
 <h1>Posts</h1>
 
+<% if notice %>
+    <div style="background-color: green; color: white"><%= notice %></div>
+<% end %>
+
+<% if alert %>
+    <div style="background-color: red; color: white"><%= alert %></div>
+<% end %>
+
 <%= @posts.each do |post| %>
     <div>
         <h3><%= post.title %></h3>
