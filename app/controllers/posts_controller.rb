@@ -11,12 +11,14 @@ class PostsController < ApplicationController
 
   def create
 
+    @post = Post.new 
     temp_content = params[:post][:content].gsub! 'spoiler', ''
     
+
     @post = Post.create(
       title: params[:post][:title],
       image_url: params[:post][:image_url],
-      content: temp_content
+      content: params[:post][:content]
     )
 
     if @post.valid?

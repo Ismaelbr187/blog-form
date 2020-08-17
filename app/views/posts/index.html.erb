@@ -13,7 +13,7 @@
         <h3><%= post.title %></h3>
         <p><%= post.created_at.strftime("%F") %> / <%= time_ago_in_words(post.created_at) %> </p>
         <p>
-            <%= image_tag(post.image_url) %>
+            <%= image_tag(post.image_url) %> 
         </p>
         <p><%= post.content %></p>
     </div>
